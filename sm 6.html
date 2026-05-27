@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tahia's Birthday ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Cinzel:wght@600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+overflow-x:hidden;
+background:black;
+color:white;
+position:relative;
+}
+
+/* PREMIUM CINEMATIC BACKGROUND */
+
+body::before{
+content:'';
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+background:
+radial-gradient(circle at 20% 20%,rgba(255,0,128,0.15),transparent 25%),
+radial-gradient(circle at 80% 30%,rgba(0,140,255,0.12),transparent 25%),
+radial-gradient(circle at 50% 80%,rgba(255,255,255,0.08),transparent 25%);
+animation:bgMove 15s infinite alternate;
+z-index:-10;
+}
+
+@keyframes bgMove{
+
+0%{
+transform:scale(1) rotate(0deg);
+}
+
+100%{
+transform:scale(1.2) rotate(3deg);
+}
+
+}
+
+/* LOADER */
+
+.loader{
+position:fixed;
+width:100%;
+height:100vh;
+background:black;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:99999;
+flex-direction:column;
+animation:hideLoader 5s forwards;
+}
+
+.loader h1{
+font-size:4rem;
+font-family:'Cinzel',serif;
+letter-spacing:5px;
+animation:glow 2s infinite alternate;
+}
+
+.loader p{
+margin-top:20px;
+font-size:18px;
+opacity:0.8;
+}
+
+@keyframes glow{
+
+from{
+text-shadow:0 0 10px #ff0080;
+}
+
+to{
+text-shadow:0 0 40px #ff0080,0 0 70px #ff4da6;
+}
+
+}
+
+@keyframes hideLoader{
+
+0%,90%{
+opacity:1;
+visibility:visible;
+}
+
+100%{
+opacity:0;
+visibility:hidden;
+}
+
+}
+
+/* GLOBAL */
+
+section{
+height:100vh;
+width:100%;
+position:relative;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+padding:40px;
+overflow:hidden;
+text-align:center;
+transition:1s;
+}
+
+h1{
+font-size:5rem;
+z-index:5;
+font-family:'Cinzel',serif;
+text-shadow:
+0 0 10px rgba(255,255,255,0.4),
+0 0 25px #ff0080;
+}
+
+h2{
+font-size:3rem;
+z-index:5;
+margin-bottom:20px;
+text-shadow:
+0 0 10px rgba(255,255,255,0.4),
+0 0 25px #ff0080;
+}
+
+p{
+max-width:1000px;
+line-height:2;
+font-size:1.2rem;
+z-index:5;
+}
+
+/* BUTTON */
+
+.btn{
+margin-top:40px;
+padding:18px 45px;
+font-size:18px;
+border:none;
+border-radius:50px;
+background:linear-gradient(45deg,#ff0080,#ff4da6);
+color:white;
+cursor:pointer;
+font-weight:bold;
+transition:0.5s;
+z-index:5;
+box-shadow:0 0 25px #ff0080;
+position:relative;
+overflow:hidden;
+}
+
+.btn:hover{
+transform:scale(1.1);
+box-shadow:0 0 50px #ff0080;
+}
+
+.btn::before{
+content:'';
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:rgba(255,255,255,0.3);
+transform:skewX(-30deg);
+transition:0.8s;
+}
+
+.btn:hover::before{
+left:120%;
+}
+
+/* FADE */
+
+.fade{
+animation:fade 2s ease;
+}
+
+@keyframes fade{
+
+from{
+opacity:0;
+transform:translateY(50px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* LIGHT EFFECT */
+
+.light{
+position:absolute;
+width:600px;
+height:600px;
+background:radial-gradient(circle,rgba(255,255,255,0.08),transparent 70%);
+border-radius:50%;
+animation:moveLight 10s infinite alternate;
+filter:blur(40px);
+}
+
+@keyframes moveLight{
+
+0%{
+transform:translate(-200px,-100px);
+}
+
+100%{
+transform:translate(200px,100px);
+}
+
+}
+
+/* PAGE 1 */
+
+.page1{
+background:radial-gradient(circle at center,#1a001f,#000);
+}
+
+#particles{
+position:absolute;
+width:100%;
+height:100%;
+}
+
+.spark{
+position:absolute;
+width:5px;
+height:5px;
+background:white;
+border-radius:50%;
+animation:sparkle linear infinite;
+}
+
+@keyframes sparkle{
+
+0%{
+transform:translateY(0) scale(0);
+opacity:0;
+}
+
+50%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-1200px) scale(2);
+opacity:0;
+}
+
+}
+
+.big-heart{
+font-size:180px;
+animation:heartbeat 1.5s infinite;
+z-index:2;
+}
+
+@keyframes heartbeat{
+
+0%{transform:scale(1);}
+25%{transform:scale(1.2);}
+40%{transform:scale(1);}
+60%{transform:scale(1.25);}
+100%{transform:scale(1);}
+
+}
+
+/* PAGE 2 */
+
+.page2{
+background:linear-gradient(to bottom,#020111,#191621,#3a1c71);
+}
+
+.moon{
+position:absolute;
+top:100px;
+right:120px;
+width:180px;
+height:180px;
+background:white;
+border-radius:50%;
+box-shadow:0 0 60px white;
+animation:moonGlow 4s infinite alternate;
+}
+
+@keyframes moonGlow{
+
+from{
+box-shadow:0 0 30px white;
+}
+
+to{
+box-shadow:0 0 100px white;
+}
+
+}
+
+.floating-text{
+position:absolute;
+font-size:22px;
+color:#ff99cc;
+opacity:0.3;
+animation:floatText 15s linear infinite;
+}
+
+@keyframes floatText{
+
+0%{
+transform:translateY(100vh);
+}
+
+100%{
+transform:translateY(-100vh);
+}
+
+}
+
+.angry-bird{
+display:inline-block;
+animation:shake 1.5s infinite;
+}
+
+@keyframes shake{
+
+0%{transform:translateX(0);}
+25%{transform:translateX(-4px);}
+50%{transform:translateX(4px);}
+75%{transform:translateX(-4px);}
+100%{transform:translateX(0);}
+
+}
+
+/* PAGE 3 */
+
+.page3{
+background:black;
+}
+
+.memory-card{
+width:80%;
+padding:50px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(20px);
+border-radius:30px;
+box-shadow:
+0 0 30px rgba(255,255,255,0.08),
+0 0 80px rgba(255,0,128,0.12);
+transform-style:preserve-3d;
+transition:1s;
+border:1px solid rgba(255,255,255,0.15);
+}
+
+.memory-card:hover{
+transform:rotateY(10deg) rotateX(10deg) scale(1.03);
+}
+
+/* PAGE 4 */
+
+.page4{
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+}
+
+.gallery{
+display:flex;
+gap:30px;
+margin-top:50px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.glass{
+width:220px;
+height:260px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(15px);
+border-radius:30px;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:25px;
+transition:0.7s;
+cursor:pointer;
+box-shadow:
+0 0 30px rgba(255,255,255,0.08),
+0 0 80px rgba(255,0,128,0.12);
+border:1px solid rgba(255,255,255,0.15);
+}
+
+.glass:hover{
+transform:translateY(-20px) scale(1.1);
+background:rgba(255,255,255,0.15);
+}
+
+/* PAGE 5 */
+
+.page5{
+background:linear-gradient(to right,#141e30,#243b55);
+}
+
+.apology-box{
+width:85%;
+padding:60px;
+background:rgba(255,255,255,0.08);
+border-radius:40px;
+backdrop-filter:blur(20px);
+box-shadow:
+0 0 30px rgba(255,255,255,0.08),
+0 0 80px rgba(255,0,128,0.12);
+animation:boxGlow 3s infinite alternate;
+border:1px solid rgba(255,255,255,0.15);
+}
+
+@keyframes boxGlow{
+
+from{
+box-shadow:0 0 20px #ff4da6;
+}
+
+to{
+box-shadow:0 0 60px #ff4da6;
+}
+
+}
+
+/* PAGE 6 */
+
+.page6{
+background:radial-gradient(circle,#2b1055,#000);
+}
+
+.final-text{
+font-size:6rem;
+font-family:'Dancing Script',cursive;
+animation:shine 3s infinite;
+}
+
+@keyframes shine{
+
+0%{
+text-shadow:0 0 10px #fff;
+}
+
+50%{
+text-shadow:0 0 40px #ff0080;
+}
+
+100%{
+text-shadow:0 0 10px #fff;
+}
+
+}
+
+.stars{
+position:absolute;
+width:100%;
+height:100%;
+overflow:hidden;
+}
+
+.star{
+position:absolute;
+color:white;
+animation:twinkle 3s infinite;
+}
+
+@keyframes twinkle{
+
+50%{
+opacity:0.1;
+}
+
+}
+
+/* MUSIC BUTTON */
+
+.music-btn{
+position:fixed;
+top:20px;
+right:20px;
+z-index:999;
+padding:15px 25px;
+border:none;
+border-radius:40px;
+background:white;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* FLOATING EMOJI */
+
+.buffalo{
+position:fixed;
+font-size:45px;
+opacity:0.18;
+pointer-events:none;
+z-index:1;
+animation:buffaloFloat linear infinite;
+}
+
+@keyframes buffaloFloat{
+
+0%{
+transform:translateY(120vh) rotate(0deg);
+opacity:0;
+}
+
+20%{
+opacity:0.18;
+}
+
+100%{
+transform:translateY(-130vh) rotate(360deg);
+opacity:0;
+}
+
+}
+
+/* HEART CLICK EFFECT */
+
+.click-heart{
+position:fixed;
+font-size:24px;
+pointer-events:none;
+animation:heartPop 1s forwards;
+z-index:99999;
+}
+
+@keyframes heartPop{
+
+0%{
+transform:scale(0);
+opacity:1;
+}
+
+100%{
+transform:scale(2) translateY(-80px);
+opacity:0;
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+h1{
+font-size:3rem;
+}
+
+h2{
+font-size:2rem;
+}
+
+.final-text{
+font-size:3.5rem;
+}
+
+p{
+font-size:1rem;
+}
+
+.big-heart{
+font-size:120px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- LOADER -->
+
+<div class="loader">
+<h1>TAHIA🖤🐃</h1>
+<p>MY FAVORITE PERSON BIRTHDAY...</p>
+</div>
+
+<!-- MUSIC -->
+
+<button class="music-btn" onclick="playMusic()">
+🎵 Play Music
+</button>
+
+<audio id="music" loop>
+<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
+
+<!-- PAGE 1 -->
+
+<section class="page1">
+
+<div class="light"></div>
+
+<div id="particles"></div>
+
+<div class="big-heart">❤️</div>
+
+<h1 class="fade">Happy 20th Birthday</h1>
+
+<h2 class="fade">Tahia 🌸</h2>
+
+<p class="fade">
+27 May — the day my favorite person was born.
+Today the stars shine differently,
+the moon looks softer,
+and my heart feels emotional because it is your birthday.
+</p>
+
+<a href="#page2">
+<button class="btn">Enter My Heart ❤️</button>
+</a>
+
+</section>
+
+<!-- PAGE 2 -->
+
+<section class="page2" id="page2">
+
+<div class="light"></div>
+
+<div class="moon"></div>
+
+<div class="floating-text" style="left:10%;">Beautiful Smile ❤️</div>
+
+<div class="floating-text" style="left:40%;animation-duration:12s;">
+Angry Bird 🐦
+</div>
+
+<div class="floating-text" style="left:70%;animation-duration:18s;">
+TAHIAR MOHISH 🐃😒
+</div>
+
+<h2 class="fade">
+My Angry Bird
+<span class="angry-bird">🐦</span>
+❤️
+</h2>
+
+<p class="fade">
+
+You get angry.
+You ignore me.
+You fight with me.
+
+But even then...
+my heart still chooses you.
+
+Because behind your anger,
+there is a beautiful soul.
+A soft heart.
+A caring person.
+
+And honestly...
+your anger is also one of the cutest things about you.
+
+</p>
+
+<a href="#page3">
+<button class="btn">WE ARE ✨</button>
+</a>
+
+</section>
+
+<!-- PAGE 3 -->
+
+<section class="page3" id="page3">
+
+<div class="light"></div>
+
+<div class="memory-card fade">
+
+<h2>SNAKE🐍🌙</h2>
+
+<p>
+
+I still remember every little moment.
+
+The random chats.
+The late-night talks.
+The small fights.
+The moments when you cared for me silently.
+
+Maybe these memories are small for others...
+but for me,
+they became priceless.
+
+You slowly became part of my daily happiness.
+One message from you can change my whole mood.
+
+That is how deeply you touched my heart.
+
+</p>
+
+</div>
+
+<a href="#page4">
+<button class="btn">More Surprise 💫</button>
+</a>
+
+</section>
+
+<!-- PAGE 4 -->
+
+<section class="page4" id="page4">
+
+<div class="light"></div>
+
+<h2 class="fade">Why tahia Special ✨</h2>
+
+<div class="gallery">
+
+<div class="glass" onclick="alert('Your smile heals my worst days ❤️')">
+😊 Smile
+</div>
+
+<div class="glass" onclick="alert('Your anger is cute, Angry Bird 🐦❤️')">
+🐦 Angry Bird
+</div>
+
+<div class="glass" onclick="alert('Mohish tmr jonno always opekkhay ace , You always keep him happy. 😒🐃')">
+🐃 Buffalo Mood
+</div>
+
+</div>
+
+<a href="#page5">
+<button class="btn">foring🦟🥺</button>
+</a>
+
+</section>
+
+<!-- PAGE 5 -->
+
+<section class="page5" id="page5">
+
+<div class="light"></div>
+
+<div class="apology-box fade">
+
+<h2>I Am Sorry ❤️</h2>
+
+<p>
+
+I know things became difficult sometimes.
+
+Maybe my words hurt you.
+Maybe my mistakes made you tired.
+Maybe I failed to show how much you actually mean to me.
+
+And now...
+you want to leave.
+
+But before you go,
+please listen to my heart one last time.
+
+I never wanted to lose you.
+
+You became special to me in a way I cannot explain.
+The thought of losing you honestly scares me.
+
+I don't want perfection.
+I just want more moments with you.
+More laughs.
+More memories.
+More conversations.
+More time.
+
+Please don't remember only my mistakes.
+Remember my love too.
+
+If possible...
+stay.
+
+Because even after everything,
+my heart still chooses you every single day.
+
+</p>
+
+</div>
+
+<a href="#page6">
+<button class="btn">choto hati ❤️</button>
+</a>
+
+</section>
+
+<!-- PAGE 6 -->
+
+<section class="page6" id="page6">
+
+<div class="light"></div>
+
+<div class="stars">
+
+<script>
+
+for(let i=0;i<200;i++){
+
+document.write(
+'<div class="star" style="top:'+
+Math.random()*100+
+'%; left:'+
+Math.random()*100+
+'%; animation-duration:'+
+(2+Math.random()*4)+
+'s;">✨</div>'
+);
+
+}
+
+</script>
+
+</div>
+
+<div class="final-text">
+Forever For Tahia ❤️
+</div>
+
+<p class="fade" style="margin-top:40px;">
+
+Happy 20th Birthday once again.
+
+No matter what happens,
+I will always pray for your happiness,
+your smile,
+your peace,
+and your success.
+
+Thank you for every memory.
+Thank you for existing.
+Thank you for being part of my life.
+
+And if someday you ever feel lonely,
+just remember:
+there is someone in this world
+who still cares about you deeply.
+
+Stay happy, Angry Bird 🐦❤️
+
+</p>
+
+<button class="btn" onclick="showLove()">
+Click in heart of mohish❤️
+</button>
+
+</section>
+
+<script>
+
+/* MUSIC */
+
+function playMusic(){
+
+document.getElementById("music").play();
+
+}
+
+/* FINAL MESSAGE */
+
+function showLove(){
+
+alert(
+"Tahia ❤️\n\nNo matter how angry you become...\nI still choose you every day."
+);
+
+}
+
+/* PARTICLES */
+
+for(let i=0;i<120;i++){
+
+let spark=document.createElement('div');
+
+spark.classList.add('spark');
+
+spark.style.left=Math.random()*100+'%';
+spark.style.top=Math.random()*100+'%';
+
+spark.style.animationDuration=
+(5+Math.random()*10)+'s';
+
+document.getElementById('particles').appendChild(spark);
+
+}
+
+/* FLOATING BUFFALO + EMOJI */
+
+const emojis = [
+'🐃',
+'❤️',
+'🐦',
+'🥺',
+'✨',
+'💖',
+'🌸',
+'💌',
+'😒'
+];
+
+for(let i=0;i<35;i++){
+
+let item=document.createElement('div');
+
+item.classList.add('MOhish');
+
+item.innerHTML=
+emojis[Math.floor(Math.random()*emojis.length)];
+
+item.style.left=Math.random()*100+'vw';
+
+item.style.animationDuration=
+(10+Math.random()*10)+'s';
+
+item.style.animationDelay=
+Math.random()*10+'s';
+
+document.body.appendChild(item);
+
+}
+
+/* HEART CLICK EFFECT */
+
+document.addEventListener('click',(e)=>{
+
+let heart=document.createElement('div');
+
+heart.classList.add('click-heart');
+
+heart.innerHTML='❤️';
+
+heart.style.left=e.clientX+'px';
+heart.style.top=e.clientY+'px';
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},1000);
+
+});
+
+</script>
+
+</body>
+
+</html>
